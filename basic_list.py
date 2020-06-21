@@ -1,36 +1,35 @@
 """
-Program: this_file_name.py
-Author:  Firstname Lastname
-Date: MM/DD/YYYY
-Change this description to be more relevant.
-This program creates a function that prints 'Hello World'
-as output.  The function is then called.
+Program: basic_list.py
+Author:  Spencer Cress
+Date: 06/20/2020
+This program contains two functions that build a list for Basic List Assignment
 """
 
-PI = 3.14159265358979323
 
 def get_input():
     """
-    Use reST style.
-    :param parameter_1: this is what the first parameter represents
-    :param parameter_2: this is what the second parameter represents
-    :returns: this is what is returned
-    :raises keyError: raises an exception
+    :returns: returns a string
     """
-    pass
+    x = input("Please input a number: ")
+    return x
 
 
 def make_list():
     """
-    Use reST style.
-    :param parameter_1: this is what the first parameter represents
-    :param parameter_2: this is what the second parameter represents
-    :returns: this is what is returned
-    :raises keyError: raises an exception
+    :returns: a list of numbers
+    :raises ValueError: returned given non-numeric input
     """
-    pass
+    number_list = []
+    for n in range(1, 4):
+        x = get_input()
+        try:
+            x = int(x)
+            number_list.append(x)
+        except ValueError:
+            print("Invalid Entry, please input a number")
+    return number_list
+
 
 
 if __name__ == '__main__':
-    #call our functions
-   pass
+    make_list()

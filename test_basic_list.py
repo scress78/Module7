@@ -1,20 +1,19 @@
 """
-Program: this_file_name.py
-Author:  Firstname Lastname
-Date: MM/DD/YYYY
+Program: test_basic_list.py
+Author:  Spencer Cress
+Date: 06/20/2020
 
-This program tests a function that prints 'Hello World'
-as output.  The function is then called.
+Tests for basic list functions
 """
 import unittest
-import unittest.mock as mock
+# import unittest.mock as mock
 from Module7.fun_with_collections import basic_list as topic1
 from unittest.mock import patch
 
 
-
 class TestList(unittest.TestCase):
-    @patch('fun_with_collections.topic1.get_input', return_value='5')
+    """Tests make list function to make sure it returns a numeric list"""
+    @patch('basic_list.get_input', return_value='5')
     def test_make_list(self, input):
         self.assertEqual(topic1.make_list(), [5, 5, 5])
 
